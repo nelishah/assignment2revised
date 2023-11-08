@@ -1,0 +1,23 @@
+{{> heading}}
+<form action="/account" method="post">
+  <div class="">
+    <input type="radio" name="option" value="Chequing" id="chequing">
+    <label for="chequing">Chequing</label>
+  </div>
+  <div class="">
+    <input type="radio" name="option" value="Savings" id="savings">
+    <label for="savings">Savings</label>
+  </div>
+  <button type="submit" id="submit" disabled>Submit</button>
+  <button type="submit" formaction="/cancel">Cancel</button>
+</form>
+
+<script defer>
+  const radioButtons = document.getElementsByName('option');
+  const submitButton = document.getElementById('submit');
+
+  radioButtons.forEach(radio => radio.addEventListener('change', (event) => {
+    const {checked} = event.target;
+    submitButton.disabled = !checked;
+  }))
+</script>

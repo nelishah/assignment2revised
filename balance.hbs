@@ -1,0 +1,7 @@
+{{> heading}}
+<p><span>Account: </span> {{accountNo}}</p>
+<p><span>Account Type: </span> {{accountType}}</p>
+<p><span>Account Balance: </span>${{accountBalance}}</p>
+<form action='/cancel' method='post'>
+  <button type='submit' id='cancel'>Back to Banking</button>
+</form>

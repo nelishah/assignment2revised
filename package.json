@@ -1,0 +1,19 @@
+{
+  "name": "Web Assignment",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "express-handlebars": "^7.1.2",
+    "express-session": "^1.17.3",
+    "memorystore": "^1.6.7",
+    "randomstring": "^1.3.0"
+  }
+}

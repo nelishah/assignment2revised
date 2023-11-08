@@ -1,0 +1,11 @@
+{{> heading}}
+<form action='/login' method='POST'>
+  <label for='username'>Username</label>
+  <input type='text' name='username' placeholder='Username' />
+  <label for='password'>Password</label>
+  <input type='password' name='password' placeholder='Password' />
+  {{#if gotError}}
+    <p id='error'>{{errorMessage}}</p>
+  {{/if}}
+  <button type='submit'>LOGIN</button>
+</form>

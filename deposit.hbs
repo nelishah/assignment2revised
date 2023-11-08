@@ -1,0 +1,11 @@
+{{> heading}}
+<p><span>Account:</span> {{accountNo}}</p>
+<form action="/deposit" method="post">
+  <input type="number" name="account" value={{accountNo}} hidden>
+  <div class="">
+    <label for="depositAmount">Deposit Amount</label>
+    <input inputmode="numeric" name="depositAmount" id="depositAmount" placeholder="Enter an amount" oninput="this.value = this.value.replace(/\D+/g, '')">
+  </div>
+  <button type="submit">Deposit</button>
+  <button type="submit" formaction="/cancel">Cancel</button>
+</form>

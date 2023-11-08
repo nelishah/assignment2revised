@@ -1,0 +1,16 @@
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+}
+
+label, input, p {
+  font-size: x-large;
+}
+
+input {
+  margin-top: 0.75rem;
+  padding: 0.4rem 0.75rem;
+  font-size: larger;
+  width: 100%;
+}

@@ -1,0 +1,77 @@
+main {
+  position: relative;
+}
+
+#username {
+  font-size: larger;
+}
+
+.link-wrapper {
+  position: absolute;
+  cursor: pointer;
+  right: 1.75rem;
+  top: 1rem;
+}
+
+.link-wrapper:hover #logout {
+  display: block;
+  cursor: pointer;
+}
+
+#logout {
+  position: absolute;
+  display: none;
+  top: 2.5rem;
+  color: white;
+  text-decoration: none;
+  background-color: lightslategray;
+  padding: 0.35rem 0.2rem;
+  text-align: center;
+  width: 100%;
+  font-size: 1rem;
+  font-weight: normal;
+}
+
+#logout::before {
+  background: lightslategray;
+  content: '';
+  height: 0.6rem;
+  width: 0.6rem;
+  transform: rotate(45deg);
+  position: absolute;
+  top: -10%;
+  left: 45%;
+  color: lightslategray;
+}
+
+#select-form {
+  margin: 1.5rem 0;
+  text-align: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.option-wrapper {
+  font-size: larger;
+}
+
+#account {
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  height: min-content;
+  text-align: center;
+  border-radius: 5rem;
+  font-size: large;
+  border: 1px solid;
+}
+
+#newAccount {
+  color: lightgreen;
+  font-size: x-large;
+  text-align: center;
+  margin-top: 1.5rem;
+}
+
+#submit {
+  margin-top: 1rem;
+}

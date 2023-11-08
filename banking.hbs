@@ -1,0 +1,51 @@
+{{> heading}}
+<div class='link-wrapper'>
+  <p id='username'>{{username}}</p>
+  <form action="/logout" method="post" id="logout-form">
+    <button type="submit" id="logout">Logout</button>
+  </form>
+</div>
+<form action='/banking' method='post' id="select-form">
+  <input inputmode="numeric" name="account" id='account' placeholder='Account Number' oninput="this.value = this.value.replace(/\D+/g, '')"/>
+  <div class='option-wrapper'>
+    <input type='radio' name='option' value='balance' id="balance" />
+    <label for='balance'>Balance</label>
+  </div>
+  <div class='option-wrapper'>
+    <input type='radio' name='option' value='deposit' id="deposit" />
+    <label for='deposit'>Deposit</label>
+  </div>
+  <div class='option-wrapper'>
+    <input type='radio' name='option' value='account' id="accountRadio" />
+    <label for='accountRadio'>Open an account</label>
+  </div>
+  <div class='option-wrapper'>
+    <input type='radio' name='option' value='withdrawal' id="withdrawal" />
+    <label for='withdrawal'>Withdrawal</label>
+  </div>
+
+  {{#if gotError}} 
+  <p id="error">{{errorMessage}}</p>
+  {{/if}}
+
+  {{#if gotNewAccount}}
+  <p id="newAccount">{{accountType}} Account {{accountNo}} Created</p>
+  {{/if}}
+
+  <button type='submit' id='submit' disabled>
+    Submit
+  </button>
+  
+</form>
+<script defer>
+  const accountInput = document.getElementById('account');
+  const radioButtons = document.getElementsByName('option');
+  const submitBtn = document.getElementById('submit');
+
+  radioButtons.forEach(radio => radio.addEventListener('change', (event) => {
+    const selectedValue = event.target.value;
+    accountInput.disabled = selectedValue === 'account';
+    const {checked} = event.target;
+    submitBtn.disabled = !checked;
+  }))
+</script>

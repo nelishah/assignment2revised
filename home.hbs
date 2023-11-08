@@ -1,0 +1,26 @@
+<main>
+  <img src='/bank-logo.jpg' alt='Bank Logo' loading='lazy' />
+  {{#if loginPage}}
+  {{> login}}
+  {{/if}}
+  
+  {{#if bankPage}}
+  {{> banking}}
+  {{/if}}
+
+  {{#if balancePage}}
+  {{> balance}}
+  {{/if}}
+
+  {{#if depositPage}}
+  {{> deposit}}
+  {{/if}}
+
+  {{#if accountPage}}
+  {{> account}}
+  {{/if}}
+
+  {{#if withdrawalPage}}
+  {{> withdrawal}}
+  {{/if}}
+</main>
